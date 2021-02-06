@@ -6,6 +6,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && add-apt-repository ppa:obsproject/obs-studio \
     && apt-get update -y \
     && apt-get install -y obs-studio \
+    && apt-get install -y wget \
     && apt-get clean -y
 
 RUN wget https://github.com/Palakis/obs-ndi/releases/download/4.9.1/libndi4_4.5.1-1_amd64.deb && dpkg -i libndi4_4.5.1-1_amd64.deb
